@@ -172,5 +172,55 @@ print(type(item))
 
 
 
+'''
+
+
+ # NUMBER BASED MODULES --> RANDOMAND MATH MODULE 
+
+ # random module-- > genrate numbers randomly on the fly 
+
+ import random
+
+ print(random.randrange(20,50))    # generate numbers in this range 
+
+ print(random.random())      # genarate any number in any range 
+
+
+# pick one word from the list
+# practical use : used in capcha 
+
+ list = ["hi", "bye", "seeyou"]
+ print(random.choice(list))
+
+# to switch order --> application -  questions ina test, otp 
+ random.shuffle(list)
+ print(list)
+
+
+
+
+# MATH MODULE 
+
+# used in amthem,atical cals
+
+
+# aliases 
+impot math as mt
+
+print(mt.factorial(5))
+print(mt.pi)
+print(mt.log(1000000))
+print(mt.pow(2,3))
+
+'''
+
+
+
+
+
+
+
+
+
 
 
