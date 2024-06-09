@@ -1,0 +1,74 @@
+''''
+#here we want to see the list of all keywords
+import keyword
+
+# keyword module is used to see all keyword in python version
+print(keyword.kwlist)
+
+#count the length of keyword list 
+print(len(keyword.kwlist))
+
+
+
+# take input from user , and take it in promt , and assign it to value variable
+value = input("enter any value from keyword...")
+
+print(value)
+
+#if we want to check what type of value i am entering and what kind of value is comiler interpreting
+print(type(value))        # oops concept ---> every type in python is an object of a class
+# by default input function will only accept string values
+
+
+
+#if u want to input other datatypes , use
+
+#Typecasting -->  changing a datatype to another datatype
+# methods -->  int(), str(), 
+
+#converting to integer
+value = int(input("enter any value from keyword..."))
+print(value)
+print(type(value))   
+
+#converting to float
+value = float(input("enter any value from keyword..."))
+print(value)
+print(type(value)) 
+
+
+
+
+
+# HOW TO OUTPUT IN DIFFERENT WAYS 
+
+#print( values--> values need to be printed,sep--> seperation btw values , by default space ,  end-->  how it will end , in nest line , next tab etc, screen--> where it will print in screen  . flush--> to clear values from screen , true -sustain , else false
+
+print(6,7,8,9)    # sep= is space , end = next line by default
+
+print(6,7,8,9, sep='%', end ='$$')
+
+
+
+
+
+# HOW TO OPEN ANOTHER FILE AND WRITE IN IT 
+
+
+# TWO MODES TO OPEN A FILE - 'r' for reading and 'w' for writing 
+#samplefile here is a file object open for writing 
+
+# python cant recognise backward slashes , thus use forward slashes
+
+samplefile = open(r'C:\Users/Lakshita\Desktop\ML_INTERNSHIP\demo.txt', 'w')
+print(6,7,8,9, sep='%', end ='$$', file=samplefile)
+
+
+
+samplefile = open('C:/Users/Lakshita\Desktop/ML_INTERNSHIP/demo.txt', 'w')
+print(6,7,8,9, sep='%', end ='$$', file=samplefile)
+
+
+
+'''
+
