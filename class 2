@@ -221,6 +221,116 @@ print(mt.pow(2,3))
 
 
 
+# SEQUENCE DATA --> list, string and tuple
+
+# List-> very flexible sequence of data as it allows all sorts of modifaucation 
+# [] brackets create lists
+# data in list can be of different data types
+# dat starts from index position 0
+
+# caharcterstics of lists -> ordered by position , mutable can be modified . repeated or duplicate 
+# values are allowed 
+
+list= [ 1,2.3, "hi", 12,44, True, 'go']
+# 1-> at positin 0.....
+
+# if we acces list from left to right , then index starts from 0
+# otherwisre from from ;eft <---------right , index starts from -1 positon 
+
+# access the first elemnt of list
+print(list[0])
+
+# print last elemnt 
+print(list[-1])
+
+
+
+
+
+
+# TUPLES 
+
+# sequnce of data hvaing order or position of elemnts but is it immutable ie cant cahnge 
+# ()--> parenthesis used to denote tuplis
+# index sarts from 0 frim left to right anf from -1 from right to left
+#it amy conatina any tyoes od afta 
+
+tup= (1,2,3,"hii", 12.33, True, 'go')
+
+
+
+
+# LIST MODIFICATION 
+# try to nmodify last element of list from bye to byebye 
+
+list= [ 1,2,3, "hi", 12,44, True, 'bye']
+list[-1]= 'bybye'
+print(list)
+
+
+
+# TUPLE MODIFICATION 
+# try to nmodify last element of list from go tto gonow
+
+tup= (1,2,3,"hii", 12.33, True, 'go')
+tup[-1]= 'gonow'
+print(tup)             --> immutability 
+
+
+
+
+
+
+
+
+# COLLECTION TYPE DATA THAT DO NOT HAVE ANY INDEX OR POSITION 
+
+#SET
+# DICTIONARY
+
+
+
+#dDICTIONARY 
+
+
+
+# create a dictionary
+#braces barckets
+# it is mutable 
+#values are in form of key:value pairs
+# each value is recognised by key 
+# keys cant be reapeted , the values caan be same 
+
+#application - where we need unique identification , or for mapping 
+
+dict= { 'name': "ajay", "age": 20}
+print(dict["age"])
+print(dict.keys())
+print(dict.values())
+print(dict.items())
+dict["age"]= 67
+print(dict["age"])
+
+
+
+
+
+
+
+
+#SET
+
+# used with{}
+# no duplicate elemnts are allowed 
+# sets are unorderd --order can be changed in diffrent system 
+
+set={1,2,2,3,3,5,5,5}
+print(set)
+
+
+
+
+
 
 
 
