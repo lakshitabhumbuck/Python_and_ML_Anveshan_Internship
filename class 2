@@ -72,3 +72,105 @@ print(6,7,8,9, sep='%', end ='$$', file=samplefile)
 
 '''
 
+
+
+
+
+'''
+
+# OUTPUT FORMATTING USING FORMAT () FUNCTION 
+
+# {} value in this , will be replaced by format
+print("  {} my anme is lakshita ".format("good moring"))
+
+str= input("enter txt")
+print("  text i had wriiten is : {} ".format(str))
+
+
+
+
+
+# HOW TO CONCATENATE 
+
+# by using + overlaoding operator 
+str1= "hi"
+str2= "miya"
+res= str1 + str2
+print(res)
+
+
+# cannot concatenate two diiferent datatype 
+str= "hi"
+num= 10
+res= str + num
+print(res)
+
+# solution --> change the type of either of varibale 
+
+
+str3= "hi"
+num= 10
+res2= str3 + str(num)
+print(res2)
+
+
+
+
+
+# NUMBER IN PYTHON 
+
+
+
+num=10+5j
+print(num)
+print(type(num))
+
+
+
+# binary base 2 for using binary number ---> prefix ob or OB
+print(OB101)
+
+
+#octal --> prefix 0o 0d 0O
+print(0o156)
+
+# hexadecimal--> prefix 0x or 0X
+print(0xAFB)
+
+
+
+
+# TYPE CASTING IS AUTOMATIC OR IMPLICIT
+
+# at time we may need to force typecasting so it will br explicit
+
+# Implicit--> automatic smaller data will be converted to a bigger datatye
+
+print( 100 + 15.67)  # integer small data + flaot big dtata type 
+# implivilty int will be converted to big dtat type 
+
+
+
+
+ #Forced exlpicit typecatsting
+
+ # conver bigger data into smaller one 
+
+ num= int(15.77)
+ print(num)       # --> gives 15
+
+val= int(-89.99)
+print(val)
+
+item= complex("10+6j")
+print(item)
+print(type(item))
+
+
+'''
+
+
+
+
+
+
