@@ -1,0 +1,412 @@
+Q1.Write a program that takes two numbers as input and prints their sum.
+
+# 1. Program to add two numbers
+def add_two_numbers():
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    sum = num1 + num2
+    print(f"The sum of {num1} and {num2} is: {sum}")
+
+add_two_numbers()
+
+
+
+Q2. Write a python program that checks whether a given number is even or
+odd.
+
+def check_even_odd(num):
+    if num % 2 == 0:
+        print(f"{num} is even.")
+    else:
+        print(f"{num} is odd.")
+
+# Example usage:
+num = int(input("Enter a number: "))
+check_even_odd(num)
+
+
+
+Q3. Write a python program that calculates the factorial of a given number.
+
+# 3. Program to calculate factorial of a number
+def factorial(num):
+    fact = 1
+    for i in range(1, num + 1):
+        fact *= i
+    return fact
+
+# Example usage:
+num = int(input("Enter a number: "))
+print(f"The factorial of {num} is: {factorial(num)}")
+
+
+Q4. Write a program that asks the user for their name and then prints a
+greeting message.
+
+# 4. Program to greet the user by name
+def greet_user():
+    name = input("Enter your name: ")
+    print(f"Hello, {name}! Welcome to the program.")
+
+greet_user()
+
+
+
+
+
+Q5. Write a program that takes a string input from the user and writes it to a
+text file.
+
+# 5. Program to write a string to a text file
+def write_to_file():
+    text = input("Enter some text to write to file: ")
+    with open('output.txt', 'w') as f:
+        f.write(text)
+    print("Text successfully written to file 'output.txt'.")
+
+write_to_file()
+
+
+
+Q6. Write a program that reads the content of a text file and prints it to the
+console.
+
+# 6. Program to read content from a text file and print it
+def read_from_file(filename):
+    with open(filename, 'r') as f:
+        content = f.read()
+    print("Content of the file:")
+    print(content)
+
+# Example usage:
+filename = 'example.txt'  # Replace with your file name
+read_from_file(filename)
+
+
+
+Q7. Write a python program that takes a string as input and returns its length.
+
+# 7. Program to calculate length of a string
+def string_length(s):
+    return len(s)
+
+# Example usage:
+input_str = input("Enter a string: ")
+print(f"Length of the string is: {string_length(input_str)}")
+
+
+
+Q8. Write a python program that concatenates two strings and returns the
+result.
+
+# 8. Program to concatenate two strings
+def concatenate_strings(s1, s2):
+    return s1 + s2
+
+# Example usage:
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+print(f"Concatenated string is: {concatenate_strings(str1, str2)}")
+
+Q9. Write a python program that checks if a substring is present in a given
+string.
+
+# 9. Program to check if a substring is present in a string
+def check_substring(main_string, substring):
+    if substring in main_string:
+        return True
+    else:
+        return False
+
+# Example usage:
+main_str = input("Enter a string: ")
+sub_str = input("Enter a substring to check: ")
+if check_substring(main_str, sub_str):
+    print(f"Substring '{sub_str}' is present in '{main_str}'.")
+else:
+    print(f"Substring '{sub_str}' is not present in '{main_str}'.")
+
+
+
+Q10. Write a python program that converts a given string to uppercase.
+
+# 10. Program to convert a string to uppercase
+def convert_to_uppercase(s):
+    return s.upper()
+
+# Example usage:
+input_str = input("Enter a string: ")
+print(f"Uppercase version of the string is: {convert_to_uppercase(input_str)}")
+
+
+
+Q11. Write a python program that generates the first n numbers in the
+Fibonacci sequence.
+
+def fibonacci_sequence(n):
+    fib = [0, 1]
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return fib
+    
+    while len(fib) < n:
+        fib.append(fib[-1] + fib[-2])
+    
+    return fib
+
+n = int(input("Enter the number of Fibonacci numbers to generate: "))
+print(f"First {n} numbers in Fibonacci sequence are: {fibonacci_sequence(n)}")
+
+
+
+Q12. Write a python program that calculates the sum of the digits of a given
+number.
+
+def sum_of_digits(num):
+    sum_digits = 0
+    while num > 0:
+        sum_digits += num % 10
+        num //= 10
+    return sum_digits
+
+num = int(input("Enter a number: "))
+print(f"Sum of digits of {num} is: {sum_of_digits(num)}")
+
+
+
+Q13. Write a program that asks the user for their birth year and calculates their
+age.
+
+from datetime import datetime
+
+def calculate_age(birth_year):
+    current_year = datetime.now().year
+    age = current_year - birth_year
+    return age
+
+birth_year = int(input("Enter your birth year: "))
+print(f"You are {calculate_age(birth_year)} years old.")
+
+
+
+Q14. Write a program that reads multiple lines of input from the user until they
+enter an empty line, then prints all the lines.
+
+def read_lines_until_empty():
+    lines = []
+    while True:
+        line = input("Enter a line (empty line to stop): ")
+        if line == '':
+            break
+        lines.append(line)
+    print("Entered lines:")
+    for line in lines:
+        print(line)
+
+read_lines_until_empty()
+
+Q15. Write a program that reads data from a CSV file and prints it to the
+console.
+
+import csv
+
+def read_csv_file(filename):
+    with open(filename, 'r') as file:
+        csv_reader = csv.reader(file)
+        for row in csv_reader:
+            print(', '.join(row))  # Print each row
+
+filename = 'data.csv'  # Replace with your CSV file path
+read_csv_file(filename)
+
+
+Q16. Write a program in python that counts the frequency of each character in
+a string.
+
+def count_characters(s):
+    freq = {}
+    for char in s:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    return freq
+
+input_str = input("Enter a string: ")
+print("Character frequency:")
+for char, count in count_characters(input_str).items():
+    print(f"{char}: {count}")
+
+
+Q17. Write a program in python that converts a given string to title case (first
+letter of each word capitalized).
+def title_case(s):
+    return s.title()
+
+input_str = input("Enter a string: ")
+print(f"Title case version of the string is: {title_case(input_str)}")
+
+
+Q18. Write a python program that checks if two strings are anagrams of each
+other.
+
+def are_anagrams(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+
+if are_anagrams(str1, str2):
+    print(f"{str1} and {str2} are anagrams.")
+else:
+    print(f"{str1} and {str2} are not anagrams.")
+
+
+Q19. Write a python program that removes all punctuation from a given string.
+
+import string
+
+def remove_punctuation(s):
+    return s.translate(str.maketrans('', '', string.punctuation))
+
+input_str = input("Enter a string: ")
+print(f"String after removing punctuation: {remove_punctuation(input_str)}")
+
+
+Q20. Write a python program that takes a list of numbers and returns their sum.
+
+def sum_of_numbers(numbers):
+    return sum(numbers)
+
+# Example usage:
+nums = [int(x) for x in input("Enter numbers separated by space: ").split()]
+print(f"Sum of numbers is: {sum_of_numbers(nums)}")
+
+
+Q21. Write a python program that counts the occurrences of a specific element
+in a list.
+
+def count_occurrences(lst, element):
+    count = 0
+    for item in lst:
+        if item == element:
+            count += 1
+    return count
+
+# Example usage:
+nums = [1, 2, 3, 4, 2, 1, 2, 3, 2]
+element = 2
+print(f"Number of occurrences of {element} in the list: {count_occurrences(nums, element)}")
+
+
+
+
+
+Q22. Write a python program that returns the minimum and maximum values
+in a list of numbers.
+
+def min_max_numbers(lst):
+    if not lst:
+        return None, None
+    min_value = min(lst)
+    max_value = max(lst)
+    return min_value, max_value
+
+# Example usage:
+numbers = [5, 2, 8, 1, 6]
+min_val, max_val = min_max_numbers(numbers)
+print(f"Minimum value: {min_val}, Maximum value: {max_val}")
+
+
+Q23. Write a program that converts temperature from Celsius to Fahrenheit
+and vice versa based on user input.
+
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+def main():
+    choice = input("Choose conversion:\n1. Celsius to Fahrenheit\n2. Fahrenheit to Celsius\nEnter choice (1/2): ")
+    
+    if choice == '1':
+        celsius = float(input("Enter temperature in Celsius: "))
+        print(f"{celsius} Celsius is {celsius_to_fahrenheit(celsius)} Fahrenheit.")
+    elif choice == '2':
+        fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+        print(f"{fahrenheit} Fahrenheit is {fahrenheit_to_celsius(fahrenheit)} Celsius.")
+    else:
+        print("Invalid choice. Please enter 1 or 2.")
+
+main()
+
+Q24. Write a program that acts as a simple calculator. It should take two
+numbers and an operator (+, -, *, /) as input and print the result.
+
+def calculator(num1, num2, operator):
+    if operator == '+':
+        return num1 + num2
+    elif operator == '-':
+        return num1 - num2
+    elif operator == '*':
+        return num1 * num2
+    elif operator == '/':
+        if num2 == 0:
+            return "Error: Division by zero!"
+        else:
+            return num1 / num2
+    else:
+        return "Invalid operator!"
+
+# Example usage:
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+op = input("Enter operator (+, -, *, /): ")
+result = calculator(num1, num2, op)
+print(f"Result: {result}")
+
+Q25. Write a program that copies the contents of one text file to another.
+
+def copy_file(source_file, destination_file):
+    try:
+        with open(source_file, 'r') as src:
+            with open(destination_file, 'w') as dest:
+                dest.write(src.read())
+        print(f"Contents of {source_file} copied to {destination_file} successfully.")
+    except FileNotFoundError:
+        print("File not found error!")
+
+# Example usage:
+source = 'source.txt'
+destination = 'destination.txt'
+copy_file(source, destination)
+
+Q26. Write a program in python that checks if a string starts with a given prefix
+or ends with a given suffix.
+
+def check_prefix_suffix(s, prefix, suffix):
+    starts_with_prefix = s.startswith(prefix)
+    ends_with_suffix = s.endswith(suffix)
+    return starts_with_prefix, ends_with_suffix
+
+# Example usage:
+input_str = input("Enter a string: ")
+prefix = input("Enter prefix to check: ")
+suffix = input("Enter suffix to check: ")
+starts_with, ends_with = check_prefix_suffix(input_str, prefix, suffix)
+print(f"Starts with '{prefix}': {starts_with}")
+print(f"Ends with '{suffix}': {ends_with}")
+
+Q27. Write a program in python that converts a string into a list of its characters.
+
+def string_to_list(s):
+    return list(s)
+
+# Example usage:
+input_str = input("Enter a string: ")
+char_list = string_to_list(input_str)
+print(f"List of characters: {char_list}")
